@@ -19,7 +19,7 @@ import java.util.Scanner;
  * @version 1.0
  * @since 28.02.24
  */
-
+//nicht bearbeiten start
 public class Game {
     private AdventureGame game;
     private Combat combat;
@@ -38,34 +38,16 @@ public class Game {
         this.player = new Player(playerName, 100, 10, 3, game);
         this.shop = new Shop(player,3, inputScanner, game);
     }
-
-    Weapon pistole = new Weapon("Pistole", WeaponType.LONG_RANGE, 40, 80, 88, 0.3);
-    Weapon messer = new Weapon("Messer", WeaponType.SHORT_RANGE, 10, 15, 20, 0.1);
-
-
-
+    //nicht bearbeiten ende
+    //hier die Waffen und Gegner definieren
 
 
     public void start(String playerName) throws InterruptedException {
         this.playerName = playerName;
         player.setName(playerName);
         player.showStats();
-        game.show("Bitte wähle eine Waffe aus, Pistole oder Messer");
-        String eingabe = game.ask("");
+       //hier die game logic
 
-        if (eingabe.equalsIgnoreCase("Pistole")) {
-            game.show("Du hast eine Pistole gekommen");
-            player.addWeapon(pistole);
-        } else if (eingabe.equalsIgnoreCase("Messer")) {
-            game.show("Du hast eine Messer bekommen");
-            player.addWeapon(messer);
-        } else {
-            game.show("Ungültige Eingabe. Bitte nur 'Pistole' oder 'Messer' eingeben.");
-        }
-
-        game.show("Wähle eine Waffe aus deinem INV");
-      String inventory = game.ask("Welche waffe möchtest du nutzen");
-        player.equipWeapon(messer);
 
     }
 }
