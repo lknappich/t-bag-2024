@@ -42,7 +42,19 @@ public class Game {
         this.shop = new Shop(player,3, inputScanner, game);
     }
     //nicht bearbeiten ende
-    //hier die Waffen und Gegner definieren
+
+
+    //hier die Waffen definieren
+
+
+
+    //hier die Tränke definieren
+
+
+
+    //hier die Gegner definieren
+
+
 
 
     public void start(String playerName) throws InterruptedException {
