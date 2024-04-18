@@ -21,6 +21,9 @@ import java.util.Scanner;
  */
 //nicht bearbeiten start
 public class Game {
+
+    String spielerEingabe;
+
     private AdventureGame game;
     private Combat combat;
     public String playerName = "";
