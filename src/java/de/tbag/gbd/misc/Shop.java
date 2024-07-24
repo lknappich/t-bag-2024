@@ -2,10 +2,10 @@ package de.tbag.gbd.misc;
 
 import de.tbag.gbd.debug.Debug;
 import de.tbag.gbd.AdventureGame;
-import de.tbag.gbd.player.Player;
+import de.tbag.gbd.player.Spieler;
 import de.tbag.gbd.BigTexts;
 
-import de.tbag.gbd.cosmetic.ConsoleColors;
+import de.tbag.gbd.cosmetic.Colors;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,13 +23,13 @@ public class Shop {
     private List<ShopItem> shopItems;
     private int maxItems;
     private String auswahl;
-    private Player player;
+    private Spieler player;
     private int shopSize;
     private AdventureGame game;
     private Debug debug = new Debug();
     private Scanner shop;
 
-    public Shop(Player player, int shopSize, Scanner scanner, AdventureGame game) {
+    public Shop(Spieler player, int shopSize, Scanner scanner, AdventureGame game) {
         this.player = player;
         this.shopSize = shopSize;
         this.shopItems = new ArrayList<>();
@@ -56,11 +56,11 @@ public class Shop {
         Random random = new Random();
         int randomIndex = random.nextInt(textInputs.length);
         String randomText = textInputs[randomIndex];
-        System.out.println(ConsoleColors.RED + "A Merchant appears: \n" + ConsoleColors.YELLOW + randomText + ConsoleColors.RESET);
+        System.out.println(Colors.RED + "A Merchant appears: \n" + Colors.YELLOW + randomText + Colors.RESET);
 
 
-        System.out.println("Sure | " + ConsoleColors.GREEN + "Yes" + ConsoleColors.RESET);
-        System.out.println("No thanks i am good  | " + ConsoleColors.RED + "No" + ConsoleColors.RESET);
+        System.out.println("Sure | " + Colors.GREEN + "Yes" + Colors.RESET);
+        System.out.println("No thanks i am good  | " + Colors.RED + "No" + Colors.RESET);
         auswahl = shop.nextLine().toLowerCase();
         game.wait(2);
 
@@ -159,9 +159,9 @@ public class Shop {
             for (ShopItem item : shopItems) {
                 //System.out.println(item.getName() + " (Cost: " + item.getCost() + ")");
                 if (player.getMoney() >= item.getCost()) {
-                    System.out.println(ConsoleColors.GREEN + item.getName() + " (Cost: " + item.getCost() + ")" + ConsoleColors.RESET);
+                    System.out.println(Colors.GREEN + item.getName() + " (Cost: " + item.getCost() + ")" + Colors.RESET);
                 } else {
-                    System.out.println(ConsoleColors.RED + item.getName() + " (Cost: " + item.getCost() + ")" + ConsoleColors.RESET);
+                    System.out.println(Colors.RED + item.getName() + " (Cost: " + item.getCost() + ")" + Colors.RESET);
                 }
             }
         }
