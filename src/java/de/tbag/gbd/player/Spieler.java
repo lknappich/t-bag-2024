@@ -1,7 +1,7 @@
 package de.tbag.gbd.player;
 
 import de.tbag.gbd.combat.Weapon;
-import de.tbag.gbd.cosmetic.ConsoleColors;
+import de.tbag.gbd.cosmetic.Colors;
 import de.tbag.gbd.debug.Debug;
 import de.tbag.gbd.misc.ShopItem;
 import de.tbag.gbd.potions.Potion;
@@ -17,7 +17,7 @@ import java.util.List;
  * @since 28.02.24
  */
 
-public class Player {
+public class Spieler {
     private String name;
     private int money;
     private double health;
@@ -33,7 +33,7 @@ public class Player {
 
 
 
-    public Player(String name, double health, int maxWeapons, int maxPotions, AdventureGame game) {
+    public Spieler(String name, double health, int maxWeapons, int maxPotions, AdventureGame game) {
         this.name = name;
         this.health = health;
         this.maxHealth = health;
@@ -50,8 +50,8 @@ public class Player {
     }
 
     public void showStats(){
-        System.out.println( ConsoleColors.GREEN + "Name: " + this.name
-                + ConsoleColors.RED + " | Health: " + health + ConsoleColors.YELLOW + " | Money: " + money + ConsoleColors.RESET);
+        System.out.println( Colors.GREEN + "Name: " + this.name
+                + Colors.RED + " | Health: " + health + Colors.YELLOW + " | Money: " + money + Colors.RESET);
     }
 
     public void addPotion(Potion potion){

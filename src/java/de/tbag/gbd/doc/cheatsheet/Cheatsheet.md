@@ -207,7 +207,7 @@ Kämpfe sind oft der Höhepunkt eines Abenteuers in einem textbasierten Spiel, w
 Kämpfe können ganz einfach gestartet werden mit:
 
 ```java
-combat.engageInCombat(player, goblin);
+kampf.Starte(player, goblin);
 ```
 
 - **Spieler**: player (hier immer player eintragen -> da player unser Spielerobjekt ist)

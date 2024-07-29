@@ -1,5 +1,5 @@
 package de.tbag.gbd.combat;
-import de.tbag.gbd.player.Player;
+import de.tbag.gbd.player.Spieler;
 
 /**
  * @author Lukas Knappich | Samuel Ratzel
@@ -13,7 +13,7 @@ public class Enemy {
     private double maxHealth;
     private Weapon weapon;
     private int amountHealingPotions;
-    private static Player player;
+    private static Spieler player;
 
     public Enemy(String name, int health, Weapon weapon, int amountHealingPotions) {
         this.name = name;
@@ -30,7 +30,7 @@ public class Enemy {
         }
     }
 
-    public void takeGold(int amount, Player player){
+    public void takeGold(int amount, Spieler player){
 
         int playerMoney = player.getMoney();
         int newMoney = playerMoney - amount;
